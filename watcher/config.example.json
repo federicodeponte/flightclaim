@@ -1,0 +1,20 @@
+{
+  "imap_host": "imap.example.com",
+  "imap_port": 993,
+  "imap_user": "you@example.com",
+  "password_env": "FLIGHTCLAIM_MAIL_PASSWORD",
+  "expected_mailbox": "you@example.com",
+  "mailbox": "INBOX",
+  "smtp_host": "smtp.example.com",
+  "smtp_port": 587,
+  "notify_to": "you@example.com",
+  "watch_senders": [
+    "regulator.example",
+    "consumer-centre.example",
+    "airline.example"
+  ],
+  "subject_keywords": [
+    "passenger rights",
+    "claim update"
+  ]
+}
