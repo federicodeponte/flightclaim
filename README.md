@@ -5,6 +5,12 @@ Regulation (EC) No 261/2004, preparing a documented claim, and choosing an
 escalation route without assigning a percentage of the recovery to a claims
 company.
 
+Claims agencies typically keep **25% to 50%** of what you recover, commonly around
+35%, and often more once a case is escalated. On a EUR 600 Article 7 payout that is
+roughly EUR 150 to EUR 300 of your money. This toolkit does the same preparation
+work for free. See [the cost comparison](docs/why-diy.md) for the full breakdown and
+for when using an agency still makes sense.
+
 > **Not legal advice.** FlightClaim provides a conservative rules-based
 > assessment, not legal representation. Verify the result, limitation period,
 > competent forum, and current law with the relevant National Enforcement Body,
