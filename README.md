@@ -123,8 +123,34 @@ contains no credential. For providers that require an app-specific mail
 credential, create it through that provider and keep it only in a local secret
 manager or environment variable.
 
+## Running it as an agent (what you have to connect)
+
+The library itself is offline and needs nothing. It decides, calculates and drafts.
+Actually pursuing a claim over the months it takes needs two connections, and
+neither is bundled here:
+
+| To do this | You must connect | Notes |
+|---|---|---|
+| Decide, calculate, draft letters | nothing | works offline, out of the box |
+| See the airline's and regulator's replies | **a mailbox** — IMAP app password, Gmail/Graph API, or an MCP mail server | required by the watcher |
+| File on a regulator's web portal | **browser automation** — Playwright, browser-use, an MCP browser, or your own hands | many National Enforcement Bodies are web-form only |
+| Send a certified physical letter | a postal provider | manual; some regulators require paper filing |
+
+Two rules the setup guide is built around:
+
+1. **A blind watcher must never report silence.** A wrong mailbox and an expired
+   token both return zero results, which looks exactly like "no reply yet". The
+   bundled watcher verifies mailbox identity and keeps a baseline, and alerts
+   instead of reassuring you when either check fails.
+2. **Never auto-send to an airline or a regulator.** Read and draft automatically,
+   then approve the exact text yourself. A regulator filing can be binding, and in
+   some jurisdictions choosing one forum forecloses the others.
+
+Full guide, including the portal-automation gotchas: **[Agent setup](docs/agent-setup.md)**.
+
 ## Documentation
 
+- [Agent setup: mailbox, browser, approval boundary](docs/agent-setup.md)
 - [Claim playbook](docs/playbook.md)
 - [Evidence checklist](docs/evidence-checklist.md)
 - [Escalation routes](docs/escalation-routes.md)
